@@ -59,9 +59,10 @@ let restaurant1 = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-      // Complete here
-    },
+      return this.restaurants.filter((things)=> {things.totalSeats-things.numberOfCustomers>=numberOfPeople
+      }).map((things)=> {things.name})},
     findRestaurantServingDish: function (dishName) {
+      return this.restaurants.filter((things)=>{things.menu.includes(dishName)}).map((things)=>{things.name})
       // Complete here
     },
     countNumberOfRestaurantsInArea: function (area) {

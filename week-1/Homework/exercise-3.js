@@ -16,8 +16,23 @@ let coffeeMachine = {
       flatWhite: 3.0,
     },
     insertedAmount: 0,
-    insertMoney: function (amount) {},
-    getCoffee: function (coffee) {},
+    insertMoney: function (amount) {
+      return this.insertedAmount=amount;
+    },
+    getCoffee: function (coffee) {
+      if(this.prices.cappuccino===this.insertedAmount){
+        return 'Please take your cappuccino';
+      }
+      else if(this.prices.blackCoffee===this.insertedAmount){
+        return "Please take your blackCoffee";
+      }
+      else if(this.insertedAmount>=3.0){
+        return "Please take your flatWhite";
+      }
+      else if(this.insertedAmount<=1){
+        return "Sorry you don't have enough money for a flatWhite";
+      }
+    },
   };
   
   /*
@@ -45,7 +60,7 @@ let coffeeMachine = {
     )}`
   );
   
-  coffeeMachine.insertMoney(2.4);
+  coffeeMachine.insertMoney(0.4);
   console.log(
     `Expected result: 'Sorry you don't have enough money for a flatWhite'. Actual result: ${coffeeMachine.getCoffee(
       "flatWhite"

@@ -100,4 +100,8 @@ var mentors = [
 ];
 
 //YOUR CODE HERE
-
+for(a of mentors){
+  if(a.job.city==="Barcelona"){
+console.log("Hi, my name is "+ a.firstName + a.lastName+"." +"I work in Barcelona and i know React.")
+  }
+};

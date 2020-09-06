@@ -39,7 +39,9 @@ function getOwnerFullName(house) {
 }
 
 // returns an array of the owners' email addresses of the two houses
-function getEmailAddresses(house1, ) {}
+function getEmailAddresses(house1, house2 ) {
+  return 
+}
 
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {}

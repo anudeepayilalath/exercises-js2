@@ -39,6 +39,12 @@ var writers = [
   },
 ];
 
+for(a of writers){
+  console.log("Hi, my name is "+a.firstName+ a.lastName+"."+ "I am "+a.age+" years old, and work as a "+a.occupation+".")
+  if(a.alive)
+  console.log(a.firstName.toUpperCase()+" "+a.lastName.toUpperCase());
+}
+
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */

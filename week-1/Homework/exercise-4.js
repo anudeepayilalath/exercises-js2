@@ -59,14 +59,20 @@ let restaurant1 = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-      return this.restaurants.filter((things)=> {things.totalSeats-things.numberOfCustomers>=numberOfPeople
-      }).map((things)=> {things.name})},
+      return this.restaurants.filter((d)=>{return d.totalSeats-d.numberOfCustomers
+        >=numberOfPeople;}).map((d)=>{return d.name;})
+      //return Barca.map((x)=>{return x.name;})
+      },
+
+
     findRestaurantServingDish: function (dishName) {
-      return this.restaurants.filter((things)=>{things.menu.includes(dishName)}).map((things)=>{things.name})
+      return this.restaurants.filter((m)=>{return m.menu.includes(dishName)}).map((m)=>{return m.name;})
       // Complete here
     },
     countNumberOfRestaurantsInArea: function (area) {
-      // Complete here
+      let z=this.restaurants.filter((v)=>{return v.address.area.includes(area)})//.map((v)=>{return v.name})
+      return z.length;
+       // Complete here
     },
   };
   

@@ -9,4 +9,6 @@ var kitten = {
 };
 
 // YOUR CODE HERE
-
+//console.log(Object.value(kitten));
+let a=Object.values(kitten);
+console.log(a);

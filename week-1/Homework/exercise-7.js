@@ -48,3 +48,7 @@ for(a of writers){
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+
+//let a=writers.map((b)=>{if(b.alive===true){console.log(b.firstName+" "+b.lastName)}});
+
+

@@ -100,8 +100,129 @@ var mentors = [
 ];
 
 //YOUR CODE HERE
+console.log(mentors.map((x)=>{return x.skills[1]  }));
+
+
+
+//1
 for(a of mentors){
   if(a.job.city==="Barcelona"){
 console.log("Hi, my name is "+ a.firstName + a.lastName+"." +"I work in Barcelona and i know React.")
   }
 };
+
+//2
+for (a of mentors){
+  if(a.job.city==="Barcelona"){
+    a.class="Jun1"
+    a.skills.push("SQL")
+  }
+};
+//3
+function removeSkill(skillName) {
+  this.skills = this.skills.filter(function (name) {
+    return name !== skillName
+  })
+}
+
+
+function addSkillFromMentors(mentors,newSkill){
+  for (const mentor of mentors) {
+    mentor.addSkill(newSkill)
+  }
+}
+
+function removeSkillFromMentors(mentors,newSkill){
+  for (const mentor of mentors) {
+    mentor.removeSkill(newSkill)
+  }
+}
+
+function mentorWithMostSkills(mentors) {
+  let topMentor
+
+  for (const mentor of mentors) {
+    if (!topMentor || topMentor.skills.length < mentor.skills.length)
+      topMentor = mentor
+  }
+
+  return topMentor
+}
+
+function addStudentLikes() {
+  this.studentLikes = this.studentLikes + 1
+} 
+
+function likeAllMentors(mentors) {
+  for (const mentor of mentors) {
+    mentor.addStudentLikes()
+  }
+}
+
+var mentors = [
+  {
+    firstName: "Antonio",
+    lastName: "Miranda",
+    skills: ["JS","React","Node"],
+    class: "Mar1",
+    studentLikes: 0,
+    job:
+      {
+        company: "Google",
+        position: "Senior developer",
+        city: "Barcelona"
+      },
+    addSkill: addSkill,
+    removeSkill: removeSkill,
+    addStudentLikes: addStudentLikes,
+  },
+  {
+    firstName: "Leo",
+    lastName: "Messi",
+    skills: ["Play football"],
+    class: "Mar3",
+    studentLikes: 0,
+    job:
+      {
+        company: "FC Barcelona",
+        position: "Player",
+        city: "Barcelona"
+      },
+    addSkill: addSkill,
+    removeSkill: removeSkill,
+    addStudentLikes: addStudentLikes,
+  },
+  {
+    firstName: "John",
+    lastName: "VanDamme",
+    skills: ["React","Angular","Python","Node"],
+    class: "Mar4",
+    studentLikes: 0,
+    job:
+      {
+        company: "Facebook",
+        position: "Software Manager",
+        city: "Chicago"
+      },
+    addSkill: addSkill,
+    removeSkill: removeSkill,
+    addStudentLikes: addStudentLikes,
+  },  
+  {
+    firstName: "Giorgio",
+    lastName: "Polvara",
+    skills: ["HTML","JS","React"],
+    class: "Mar2",
+    studentLikes: 0,
+    job:
+      {
+        company: "Amazon",
+        position: "Senior developer",
+        city: "Barcelona"
+      },
+    addSkill: addSkill,
+    removeSkill: removeSkill,
+    addStudentLikes: addStudentLikes,
+  },
+
+];

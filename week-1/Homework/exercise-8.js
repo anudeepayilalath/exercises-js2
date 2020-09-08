@@ -106,7 +106,7 @@ console.log(mentors.map((x)=>{return x.skills[1]  }));
 
 //1
 for(a of mentors){
-  if(a.job.city==="Barcelona"){
+  if(a.job.city==="Barcelona" && a.skills.includes("react")){
 console.log("Hi, my name is "+ a.firstName + a.lastName+"." +"I work in Barcelona and i know React.")
   }
 };

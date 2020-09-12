@@ -16,7 +16,7 @@
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
   //let bdy=document.querySelector("body")
-  arrayOfPeople.forEach((item)=>{
+  arrayOfPeople.map((item)=>{
   let title1=document.createElement("h1")
 
    title1.innerText=item.name
@@ -79,7 +79,36 @@ tag.appendChild(unlist);
 **/
 function exerciseThree(books) {
   //Write your code in here
-}
+  let unlist=document.createElement("ul")
+  let cont=document.querySelector("body")
+  
+  books.forEach((ele)=>{
+    let listies=document.createElement("li")
+    let paragr=document.createElement("p")
+    paragr.innerText=ele.author+" "+ele.title
+    
+    let image=document.createElement("img")
+    image.src=ele.imgsource
+   
+    if(ele.alreadyRead===true){
+      paragr.style.backgroundColor="red"
+    }
+    else if(ele.alreadyRead===false){
+      paragr.style.backgroundColor="green"
+    }
+    
+    listies.appendChild(paragr)
+    paragr.appendChild(image)
+    unlist.appendChild(listies)
+    //paragr.className=blueberry
+  });
+    
+    
+   
+    
+    cont.appendChild(unlist)
+
+};
 
 //
 //
@@ -107,17 +136,20 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
+    imgsource:"./images/firstbook.jpeg"
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
+    imgsource:"./images/secondbook.jpeg"
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
+    alreadyRead: true,
+    imgsource:"./images/thirdbook.jpeg"
   }
 ];
 

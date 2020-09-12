@@ -15,6 +15,16 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  //let bdy=document.querySelector("body")
+  arrayOfPeople.forEach((item)=>{
+  let title1=document.createElement("h1")
+
+   title1.innerText=item.name
+   let title2=document.createElement("h2")
+   title2.innerText=item.job
+   content.appendChild(title1)
+   content.appendChild(title2)})
+
 }
 
 /**
@@ -25,8 +35,18 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
+  let unlist=document.createElement("ul")
+  let tag=document.querySelector("#content")
+  shopping.forEach((item)=>{
+  
+  let list=document.createElement("li")
+  list.innerText=item
+  unlist.appendChild(list);
+
+});
+tag.appendChild(unlist);
   //Write your code in here
-}
+};
 
 /**
     I'd like to display my three favorite books inside a nice webpage!

@@ -58,7 +58,7 @@ function setAlarm(){
   let startButton=document.getElementById("set")
   let inputArea=document.getElementById("alarmSet")
   let timeRemain2=document.getElementById("timeRemaining")
-  let newnumber=inputArea.valueAsNumber
+  let newnumber=inputArea.value
      
   let counter=newnumber
       function timer(counter){
@@ -76,7 +76,7 @@ function setAlarm(){
             timeRemain2.innerText="Time remaining is 00:"+counter
           }
         }
-        else{
+        else if(counter<1){
           playAlarm()
         }
 

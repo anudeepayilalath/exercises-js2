@@ -10,3 +10,26 @@ user latitude and longitude.
 
 ================
 */
+let button=document.querySelector("button")
+console.log(button)
+
+
+button.addEventListener("click", function(e){
+    e.preventDefault()
+    let a=document.getElementById("first-form").value
+    let b=document.getElementById("second-form").value
+    let h3=document.createElement("h3")
+    document.body.appendChild(h3)
+
+
+    let url="https://fcc-weather-api.glitch.me/api/current?lat="+a+"&lon="+b+""
+    fetch(url)
+    .then((result)=>result.json())
+    .then((fetchedresult)=>{console.log(fetchedresult)
+    
+    h3.innerText=fetchedresult.main.temp
+    }
+    
+    )
+
+})

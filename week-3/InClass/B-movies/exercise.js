@@ -59,9 +59,68 @@ var movies = [
 ];
 
 // create showMovies function
+  let movieSection=document.getElementById("all-movies")
+  let c=document.getElementById("movies-number")
 
+
+  setTimeout(showMovies, 1000)
+
+
+  function showMovies(){
+    c.innerText=movies.length
+    //para.innerText=movies.title+movies.director
+    movies.forEach((items)=>{
+      let para=document.createElement("p")
+      // console.log("Hola")
+      para.innerText=items.title+" "+items.director
+      movieSection.appendChild(para)
+      console.log(items.title)
+    })
+  }
+
+  
+  //showMovies(movies);
 
 // create a new movie object for your favorite movie
-
+let myfav={
+  title:"Jurassic Park",
+  director:"Steven Speilberg",
+  type:"adventure",
+  haveWatched:true
+}
 
 // create addMovies function
+//setTimeout(addMovies, 2000)
+// function addMovies(){
+  
+//   movies.push(myfav)
+// }
+// addMovies();
+
+//Task 4
+function addMovies(movie){
+  
+  movies.push(movie)
+  showMovies();
+}
+
+// addMovies(myfav);
+
+
+// let button=document.getElementById("button")
+
+
+function handleSubmit(){
+ 
+  let movieTitle=document.getElementById("title").value;
+  let movieDirector=document.getElementById("director").value;
+  let movieType=document.getElementById("type").value;
+  let movieWatched=document.getElementById("haveWatched").value;
+
+
+  let newmovie={title:movieTitle, director:movieDirector, type:movieType, watched:movieWatched }
+
+addMovies(newmovie)
+
+}
+

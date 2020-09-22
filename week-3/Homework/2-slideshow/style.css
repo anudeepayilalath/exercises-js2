@@ -1,1 +1,19 @@
 /** Write your CSS in here **/
+body{
+    margin:0;
+
+}
+#maindiv{
+    background-color:lightgreen;
+    width:60em;
+    height:38em;
+    margin-left:10em;
+    margin-top:5em;
+    border:solid red 3px;
+}
+
+#firstinner{
+    width:auto;
+
+}
+ #secondinner{width:auto;}

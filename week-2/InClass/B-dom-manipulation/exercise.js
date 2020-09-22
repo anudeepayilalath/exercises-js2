@@ -59,9 +59,14 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 let db=document.querySelector("#addTextBtn")
+  console.log(db)  
 db.addEventListener("click", function(){
+    console.log("hola")
     let bd=document.querySelector(".heading-underline")
     let newpar=document.createElement("p")
+   
+    
+    newpar.innerText="wbfowef"
     bd.appendChild (newpar);
 });
 
@@ -71,7 +76,7 @@ Task 5
 ======
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
-*/
+// */
 let largeBtn=document.querySelector("#largerLinksBtn")
 let whole=document.querySelector("body")
 largeBtn.addEventListener("click", function(){
@@ -87,9 +92,9 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
-let db=document.querySelector("#addArticleBtn")
+let dk=document.querySelector("#addArticleBtn")
 
-db.addEventListener("click", function(event){
+dk.addEventListener("click", function(event){
     event.preventDefault()
     let dhf=document.querySelector("input.addArticle")
     let innercont=dhf.value
@@ -97,6 +102,7 @@ db.addEventListener("click", function(event){
     let bd=document.querySelector("#mainArticles")
     let newpar=document.createElement("p")
         newpar.innerText=innercont
+        //p.classList.add
     bd.appendChild (newpar);
     dhf.value=""
 });
@@ -109,11 +115,15 @@ Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
+
+
+
 let colours=["red", "orange", "green", "blue", "yellow"]
 let bdy=document.querySelector("body")
 let bton=document.querySelector("#bgrChangeBtn")
+let counter=0;
 bton.addEventListener("click", function (){
-    let counter=0;
+    
     //let colorgroup=colours[counter]
     bdy.style.backgroundColor=colours[counter]
     counter=counter+1

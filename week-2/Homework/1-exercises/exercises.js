@@ -41,6 +41,7 @@ function exerciseTwo(shopping) {
   
   let list=document.createElement("li")
   list.innerText=item
+  unlist.classList.add("blueberry4")
   unlist.appendChild(list);
 
 });
@@ -88,19 +89,29 @@ function exerciseThree(books) {
     paragr.innerText=ele.author+" "+ele.title
     
     let image=document.createElement("img")
-    image.src=ele.imgsource
-   
+    //image.src=ele.imgsource
+    image.setAttribute("src", ele.imgsource)
+
     if(ele.alreadyRead===true){
-      paragr.style.backgroundColor="red"
+      listies.style.backgroundColor="green"
     }
     else if(ele.alreadyRead===false){
-      paragr.style.backgroundColor="green"
+      listies.style.backgroundColor="red"
     }
     
     listies.appendChild(paragr)
-    paragr.appendChild(image)
+    listies.appendChild(image)
     unlist.appendChild(listies)
-    //paragr.className=blueberry
+
+    //first method
+    unlist.classList.add("blueberry")
+
+    //second method which will replace the already existing classes
+    // unlist.className="blueberry"
+
+    listies.classList.add("blueberry3")
+    image.classList.add("blueberry2")
+    paragr.classList.add("blueberry2")
   });
     
     

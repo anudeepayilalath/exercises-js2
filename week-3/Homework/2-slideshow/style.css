@@ -17,3 +17,9 @@ body{
 
 }
  #secondinner{width:auto;}
+ #buttonsdiv{
+     display:flex;
+     justify-content:center;
+     margin:1em;
+ }
+ #buttonsdiv button{margin:1em;}

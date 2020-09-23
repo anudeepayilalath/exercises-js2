@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
+   
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -14,16 +14,20 @@
   <body>
 
     <div id="maindiv">
-      <div id="firstinner"></div>
+      <div id="firstinner" style="display:flex; justify-content:center;">
+        <img id="imagecollection" style="width:28em; ">
+      </div>
       <div id="secondinner"></div>
       <div id="buttonsdiv">
-        <button id="startbutton" type="button">start</button>
-        <button id="stopbutton" type="button">stop</button>
-        <button id="forwardbutton" type="button">forward</button>
-        <button id="backwardbutton" type="button">backword</button>
+        <button id="autoforward" type="button">Auto-Forward</button>
+        <button id="autobackward" type="button">Auto-Backward</button>
+       <button id="stop"> Stop</button>
+        <button id="nextbutton" type="button">next</button>
+        <button id="backbutton" type="button">back</button>
 
       </div>
     </div>
     <!-- Write your HTML in here -->
+    <script src="slideshow.js"></script>
   </body>
 </html>
